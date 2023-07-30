@@ -1,0 +1,20 @@
+<html>
+<body>
+
+{% if filename %}
+<div>
+<img src = "{{ url_for('static',filename= '/images/'+filename) }}">
+</div>
+{% endif %}
+
+{% if smile %}
+<h2> {{ smile }} </h2>
+{%endif%}
+
+<form action="/home" method="post" enctype="multipart/form-data">
+<label for="fname"> Upload the image:</label>
+<input type="file" id="file" name="file">
+<input type="Submit" value="Submit">
+</form>
+</body>
+</html>
